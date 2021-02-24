@@ -1,0 +1,64 @@
+@using Vocabulary.Models
+
+@{
+  ViewData["Title"] = "Words";
+  int page = ViewBag.Page < 0 ? 1 : ViewBag.Page;
+}
+
+<div class="text-center">
+  <h4>Words</h4>
+</div>
+
+<hr>
+
+<form action="/words" method="GET">
+  <input type="text" name="searchWord" value='@ViewBag.SearchWord' />
+  <button type="submit" class="btn btn-outline-dark" style="padding: 3px 12px 2px;">
+    Search
+  </button>
+  &nbsp;
+  @if (ViewBag.SearchWord?.Length > 0)
+  {
+    @Html.ActionLink("Clear", "index", "words", new { page })
+  }
+</form>
+
+<br>
+
+<div class="row">
+  @foreach (Word word in (List<Word>)ViewBag.Words)
+  {
+    <div class="col-10 col-sm-6">
+      @Html.ActionLink(word.Eng, "edit", "words", new {word.Id})
+    </div>
+    <div class="col-sm-5 d-none d-sm-block">
+      @word.Rus
+    </div>
+    <div class="col-2 col-sm-1" style="text-align: right">
+      @word.Points
+    </div>
+  }
+</div>
+<hr>
+<div class="row">
+  <div class="col-4 pagination-item">
+    @if (page != 1)
+    {
+      @Html.ActionLink("< prev", "index", "words", new { page = page - 1, searchWord = ViewBag.SearchWord })
+    }
+    else
+    {
+      <span style="color: gray;">
+        &lt; prev
+      </span>
+    }
+  </div>
+  <div class="col-4 pagination-item">
+    <span>
+      Page @(page)
+    </span>
+  </div>
+  <div class="col-4 pagination-item">
+    @Html.ActionLink("next >", "index", "words", new { page = page + 1, searchWord = ViewBag.SearchWord })
+  </div>
+</div>

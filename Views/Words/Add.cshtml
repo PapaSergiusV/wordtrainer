@@ -1,0 +1,42 @@
+@model Vocabulary.Models.Word
+
+@{
+  ViewData["Title"] = "Add word";
+}
+
+<div class="text-center">
+  <h4>
+    Add Word
+  </h4>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-6 offset-md-3">
+    <form asp-action="add" asp-controller="words" method="POST" class="max-width">
+      <div class="validation" asp-validation-summary="ModelOnly"></div>
+      <div class="form-group">
+        <label asp-for="Rus">Rus</label><br>
+        <input type="text" asp-for="Rus" required>
+        <span asp-validation-for="Rus"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="Eng">Translation</label><br>
+        <input type="text" asp-for="Eng" required>
+        <span asp-validation-for="Eng"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="Language">Language</label>&nbsp;
+        <select asp-for="Language" required>
+          <option value="en">English</option>
+          <option value="fr">Francais</option>
+        </select>
+        <span asp-validation-for="Language"></span>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-dark">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
