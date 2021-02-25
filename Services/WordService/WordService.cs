@@ -86,6 +86,8 @@ namespace Vocabulary.Services
           originals[i].CopyFrom(copy);
         }
         originals[i].UpdatedAt = DateTime.UtcNow;
+        if (originals[i].IsLearned && originals[i].Points < 5)
+          originals[i].IsLearned = false;
       }
       //   if (IsDuplicate(word))
       //     return (false, $"Word {word.Eng} is duplicate");
@@ -96,7 +98,7 @@ namespace Vocabulary.Services
 
     public async Task Remove(int id)
     {
-      _context.Remove(id);
+      _context.Remove(await Find(id));
       await _context.SaveChangesAsync();
     }
 

@@ -34,7 +34,7 @@ namespace Vocabulary.Controllers
     public async Task<IActionResult> Index(int page = 1, string searchWord = "")
     {
       BaseFilter<Word> filter = new BaseFilter<Word>(
-        page, w => w.UserId == _user.Id && (Regex.IsMatch(w.Eng, searchWord) || Regex.IsMatch(w.Rus, searchWord))
+        page, w => w.UserId == _user.Id && (Regex.IsMatch(w.Eng.ToLower(), searchWord.ToLower()) || Regex.IsMatch(w.Rus, searchWord.ToLower()))
       );
       IEnumerable<Word> words = await _wordService.FindAll(filter);
       ViewBag.Words = words;
