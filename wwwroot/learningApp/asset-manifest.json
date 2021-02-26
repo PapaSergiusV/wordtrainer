@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/learningApp/static/css/main.6acda174.chunk.css",
-    "main.js": "/learningApp/static/js/main.5e260a6f.chunk.js",
-    "main.js.map": "/learningApp/static/js/main.5e260a6f.chunk.js.map",
+    "main.js": "/learningApp/static/js/main.4605790d.chunk.js",
+    "main.js.map": "/learningApp/static/js/main.4605790d.chunk.js.map",
     "runtime-main.js": "/learningApp/static/js/runtime-main.5d93ed2d.js",
     "runtime-main.js.map": "/learningApp/static/js/runtime-main.5d93ed2d.js.map",
     "static/css/2.79c08235.chunk.css": "/learningApp/static/css/2.79c08235.chunk.css",
-    "static/js/2.4531f603.chunk.js": "/learningApp/static/js/2.4531f603.chunk.js",
-    "static/js/2.4531f603.chunk.js.map": "/learningApp/static/js/2.4531f603.chunk.js.map",
+    "static/js/2.3d26a76f.chunk.js": "/learningApp/static/js/2.3d26a76f.chunk.js",
+    "static/js/2.3d26a76f.chunk.js.map": "/learningApp/static/js/2.3d26a76f.chunk.js.map",
     "static/js/3.6d7b7ab7.chunk.js": "/learningApp/static/js/3.6d7b7ab7.chunk.js",
     "static/js/3.6d7b7ab7.chunk.js.map": "/learningApp/static/js/3.6d7b7ab7.chunk.js.map",
     "index.html": "/learningApp/index.html",
     "static/css/2.79c08235.chunk.css.map": "/learningApp/static/css/2.79c08235.chunk.css.map",
     "static/css/main.6acda174.chunk.css.map": "/learningApp/static/css/main.6acda174.chunk.css.map",
-    "static/js/2.4531f603.chunk.js.LICENSE.txt": "/learningApp/static/js/2.4531f603.chunk.js.LICENSE.txt"
+    "static/js/2.3d26a76f.chunk.js.LICENSE.txt": "/learningApp/static/js/2.3d26a76f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5d93ed2d.js",
     "static/css/2.79c08235.chunk.css",
-    "static/js/2.4531f603.chunk.js",
+    "static/js/2.3d26a76f.chunk.js",
     "static/css/main.6acda174.chunk.css",
-    "static/js/main.5e260a6f.chunk.js"
+    "static/js/main.4605790d.chunk.js"
   ]
 }
